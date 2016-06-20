@@ -1,0 +1,8 @@
+def sampleProperties = new Properties()
+def sample = new File(basedir, 'target/classes/sample.properties')
+sampleProperties.load(new FileInputStream(sample))
+assert sampleProperties.getProperty('author', 'schulte')
+assert sampleProperties.getProperty('commitedDate', '2016-06-18 10:53:23 -0300')
+assert sampleProperties.getProperty('commitedRevision', '1749031')
+assert sampleProperties.getProperty('url', 'https://svn.apache.org/repos/asf/maven/plugins/trunk/maven-install-plugin')
+assert sampleProperties.getProperty('revision', '1749407')
